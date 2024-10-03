@@ -1,0 +1,127 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #af4c59;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 20px;
+}
+
+/* Navegação */
+nav {
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #333;
+    border-radius: 5px;
+    margin: 0 5px;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+/* Imagem principal no cabeçalho */
+header img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+/* Conteúdo principal */
+main {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+main h2, main h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+main p a {
+    color: #af4c59;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+main p a:hover {
+    text-decoration: underline;
+}
+
+/* Seção de Fotografias */
+main p img {
+    width: 150px;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+main p img:hover {
+    transform: scale(1.05);
+}
+
+/* imagens */
+iframe[name="fotoGrande"] {
+    display: block;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+
+/* video */
+iframe[title="YouTube video player"] {
+    display: block;
+    margin: 20px auto;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+}
+
+/* poema*/
+main p {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
