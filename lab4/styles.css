@@ -45,7 +45,7 @@ nav a:hover {
     background-color: #555;
 }
 
-/* Imagem principal no cabeçalho */
+/* imagem pricipal */
 header img {
     width: 100%;
     height: auto;
@@ -53,9 +53,9 @@ header img {
     border-radius: 5px;
 }
 
-/* Conteúdo principal */
+/* conteudo */
 main {
-    background-color: white;
+    background-color: #fffb1a;
     padding: 20px;
     border-radius: 5px;
     margin: 20px 0;
@@ -78,7 +78,7 @@ main p a:hover {
     text-decoration: underline;
 }
 
-/* Seção de Fotografias */
+/* fotografias */
 main p img {
     width: 150px;
     height: auto;
@@ -121,7 +121,7 @@ main p {
     line-height: 1.8;
 }
 
-/* Rodapé */
+/* footer */
 footer {
     text-align: center;
     background-color: #333;
