@@ -15,6 +15,7 @@ body {
 
 /* Cabeçalho */
 header {
+    width: 65%;
     background-color: #fffb1a;
     color: rgb(255, 57, 54);
     padding: 20px;
@@ -131,4 +132,8 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+.titulos
+{
+    font-size: 25px;
 }
