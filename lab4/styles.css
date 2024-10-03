@@ -17,7 +17,7 @@ body {
 /* Cabeçalho */
 header {
     background-color: #fffb1a;
-    color: rgb(255, 255, 255);
+    color: rgb(255, 57, 54);
     padding: 20px;
     text-align: center;
 }
@@ -68,7 +68,7 @@ main h2, main h3 {
 }
 
 main p a {
-    color: #fffb1a;
+    color: #ff1736;
     text-decoration: none;
     font-weight: bold;
     margin-right: 10px;
@@ -96,6 +96,7 @@ main p img:hover {
         transition: transform 0.3s ease;
     
 }
+
 
 /* imagens */
 iframe[name="fotoGrande"] {
