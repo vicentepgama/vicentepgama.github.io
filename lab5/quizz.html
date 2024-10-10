@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <meta charset="UTF-8">
+        <title>Cidade</title>
+    </head>
+    <body>
+        <header>
+            <h1>ᗩ ᗰIᘉᕼᗩ ᑕIᗞᗩᗞᕮ</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="local.html">Localização</a>
+                <a href="multimedia.html">Multimedia</a>
+                <a href="info.html">Informação</a>
+                <a href="quizz.html">Quizz</a>
+                <a href="viagem.html">Viagem</a>
+                <a href="pontosinteresse.html">Open Lab5</a> - Pontos de Interesse
+            </nav>
+            <img src="images/principal.jpg" alt="Imagem Principal" />
+
+        </header>
+        <main>
+            <h2>Quizz</h2>
+           
+            <form method="get" action="https://postman-echo.com/get">
+                <fieldset>
+                    <legend>Dados Pessoais:</legend>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Insira seu nome" autocomplete="name" required autofocus><br><br>
+                    
+                    <label for="apelido">Apelido:</label>
+                    <input type="text" id="apelido" name="apelido" placeholder="Insira seu apelido" autocomplete="family-name" required><br><br>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="email" size="30" required><br><br>
+
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Resetar">
+                </fieldset>
+            </form>
+
+            <form>
+                <fieldset>
+                    <legend>Perguntas sobre Hanoi e o Vietnam</legend>
+
+                    <label for="pergunta">Pergunta: </label>
+                    <input type="text" id="pergunta" name="pergunta" placeholder="Hanoi é em que país? autofocus maxlength"><br><br>
+
+                    <label for="genero">Gênero:</label><br>
+                    <input type="radio" id="feminino" name="genero" value="Feminino"> Feminino<br>
+                    <input type="radio" id="masculino" name="genero" value="Masculino"> Masculino<br>
+                    <input type="radio" id="naobinario" name="genero" value="Não Binário"> Não Binário<br>
+                    <input type="radio" id="pansexual" name="genero" value="Pan Sexual"> Pan Sexual<br>
+                    <input type="radio" id="homossexual" name="genero" value="Homossexual" required> Homossexual<br><br>
+
+                    <legend>Já respondeu a pergunta com sinceridade?</legend>
+                    <input type="checkbox" id="sim" name="sinceridade" value="Sim" required> Sim
+                    <input type="checkbox" id="nao" name="sinceridade" value="Nao"> Não<br><br>
+
+                    <legend>Em que ano acabou a guerra do Vietnam?</legend>
+                    <label for="dataguerra">Data:</label>
+                    <input type="date" id="dataguerra" name="dataguerra" required><br><br>
+
+                    <legend>A que horas está a fazer este Quizz?</legend>
+                    <label for="horas">Hora:</label>
+                    <input type="time" id="horas" name="horas" value="12:00" required><br><br>
+
+                    <legend>Qual a cor principal da bandeira do Vietnam?</legend>
+                    <label for="cor">Cor:</label>
+                    <input type="color" id="cor" name="cor"><br><br>
+
+                    <legend>Com quantas pessoas gostaria de fazer uma viagem destas?</legend>
+                    <label for="numero">Número de pessoas:</label>
+                    <input type="number" id="numero" name="numero" min="0" max="100" step="1" value="1"><br><br>
+
+                    <legend>Qual a sua satisfação com o quizz?</legend>
+                    <label for="satisfacao">Satisfação (0-100):</label>
+                    <input type="range" id="satisfacao" name="satisfacao" min="0" max="100" step="10" value="50"><br><br>
+
+                    <legend>Carregue uma imagem do Vietnam:</legend>
+                    <label for="imagem">Imagem:</label>
+                    <input type="file" id="imagem" name="imagem" accept="image/*"><br><br>
+
+                    <input type="submit" value="Enviar">
+                </fieldset>
+            </form>
+        </main>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+        </main>
+        <footer>
+            <p>DIW 2024</p>
+        </footer>
+    </body>
+</html>
