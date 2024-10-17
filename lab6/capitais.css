@@ -1,0 +1,159 @@
+* {
+    margin:0;  
+    padding:0;  
+    box-sizing: border-box; /* borda */
+}
+
+
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4CAF50; 
+    color: #ffffff; /*texto */
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+/* Estilização dos links */
+nav {
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #333;
+    border-radius: 5px;
+    margin: 0 5px;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+/*  poema */
+#poema {
+    width: 100vw;
+    height: 50vh;
+    background-color: #f0f8ff; /* Escolha uma cor de fundo agradável */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Estilo para o poema */
+#poema p {
+    font-style: italic;
+    font-weight: normal;
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* nome do autor */
+#poema .author {
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1em;
+    color: #555;
+}
+
+
+/* posicao */
+#paisagem .image-container {
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+}
+
+/* Estilo da imagem */
+#paisagem img {
+    width: 100vw;
+    height: auto;
+    display: block;
+}
+
+/* autor */
+#paisagem .photo-credit {
+    position: absolute;
+    bottom: 10px; 
+    right: 15px; 
+    font-size: 0.9em;
+    color: white; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#paisagem .photo-credit a {
+    color: white;
+    text-decoration: none;
+}
+
+#paisagem .photo-credit a:hover {
+    text-decoration: underline;
+}
+
+
+/* Estilo para o <article> com display flex */
+#cidades {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+/* Estilo para cada <section> */
+#cidades section {
+    display: flex;
+    align-items: center;
+    width: calc(33.33% - 20px); /* Distribui em três colunas com espaçamento */
+    margin: 10px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo para a imagem */
+#cidades img {
+    width: 100px; /* Largura da imagem conforme solicitado */
+    height: 100px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+/* Estilo para o <div> com o nome da cidade */
+#cidades section div {
+    flex-grow: 1;
+    width: 100px; /* Largura conforme solicitado */
+    height: 100%; /* Altura para acompanhar a imagem */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f8f8;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito hover para o <div> */
+#cidades section:hover div {
+    background-color: #e6e6e6;
+}
