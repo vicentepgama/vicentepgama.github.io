@@ -1,12 +1,35 @@
-* {box-sizing: border-box; padding: 0; margin: 0;}
-header {grid-area: header-area;}
-nav {grid-area: menu; background-color: rgb(7, 7, 7);}
-aside {grid-area: aside-area; background-color: rgb(255, 255, 255);}
-main {grid-area: main-area; background-color: aliceblue;}
-footer {grid-area: footer-area; background-color: rgb(255, 0, 0);}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    grid-area: header-area;
+}
+
+nav {
+    grid-area: menu;
+   
+}
+
+aside {
+    grid-area: aside-area;
+    
+}
+
+main {
+    grid-area: main-area;
+    background-color: rgb(255, 242, 0);
+}
+
+footer {
+    grid-area: footer-area;
+    background-color: rgb(255, 0, 0);
+    ;
+}
 
 
-/* mobile */
 @media only screen and (max-width: 767px) {
     body {
         background-color: rgb(218, 128, 128);
@@ -21,265 +44,47 @@ footer {grid-area: footer-area; background-color: rgb(255, 0, 0);}
     }
 
     header h1 {
-        grid-area: header-area;
-        background-color: rgba(255, 0, 0, 0.825);
         text-align: center;
-        padding: 15px;
-        text-transform: uppercase;
+        padding: 50px;
         font-size: 30px;
-        color: rgb(255, 255, 255);
-        font-family: monospace;
-        justify-content: space-between;
-        align-items: center;
+        color: white;
+        text-transform: uppercase;
     }
 
     nav {
-        grid-area: menu-area;
         display: flex;
-    justify-content: center; 
-    background-color: rgb(246, 255, 0);
-    padding: 10px
+        justify-content: center;
+        background-color: rgb(246, 255, 0);
+        padding: 10px;
     }
 
-    /* Estilo dos links do menu, mantendo a responsividade */
     nav a {
-        color: white; 
-        background-color: #333; 
-        padding: 10px 20px; 
-        margin: 5px; 
-        text-decoration: none; 
-        border-radius: 10px; 
-    }
-
-    nav a:hover {
-        background-color: #555;
-    }
-
-    .menu {
-        position: relative;
-    }
-
-    .conteudo {
-        display: none;
-        position: absolute;
-        border-radius: 0px 0px 10px 0px;
-        z-index: 1;
-    }
-
-    .conteudo a {
-        color: rgb(255, 255, 255);
-        padding: 12px;
+        color: white;
+        background-color: #333;
+        padding: 10px 20px;
+        margin: 5px;
         text-decoration: none;
-        display: flex;
-        text-align: center;
-    }
-
-    .conteudo a:hover {
-        color: rgb(255, 0, 0);
-        padding: 12px;
         border-radius: 10px;
-    }
-
-    .conteudo {
-        display: flex;
-    }
-
-    .conteudo:hover {
-        display: flex;
     }
 
     aside {
-        grid-area: aside-area;
         padding: 10px;
-        background-color: rgb(246, 255, 0);
         text-align: center;
-        height: 230px;
-        zoom: 90%;
-    }
-
-    aside img {
-        display: none;
+        background-color: rgb(246, 255, 0);
+        height: auto;
     }
 
     main {
-        grid-area: main-area;
-        background-color: rgb(246, 255, 0);
-        color: rgb(255, 255, 255);
-        border-radius: 14px;
         padding: 20px;
         margin: 10px;
-    }
-
-    main p {
-        font-family: cursive;
-    }
-
-    main a {
-        color: rgb(255, 255, 255);
-        text-decoration: none;
-        font-size: 18px;
-        margin: 5px;
-    }
-
-    main a:hover {
-        background-color: #e9e9e97e;
-        border-radius: 5px;
-        color: rgb(255, 255, 7);
-        padding: 7px;
-    }
-
-    main iframe {
-        width: 75%;
-        height: auto;
-    }
-
-    /* Remover as fotos no mobile */
-    main p a:first-child {
-        display: none;
-    }
-
-    main p {
-        margin: 10px;
-    }
-
-    main h2 {
-        color: rgb(0, 0, 0);
-    }
-
-    main h3 {
-        color: rgba(0, 0, 0, 0.703);
-    }
-
-    main div p {
-        padding-top: 10px;
-        font-size: 15px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    }
-
-    main div p::first-letter {
-        color: rgba(0, 0, 0, 0.703);
+        border-radius: 14px;
+        background-color: rgb(246, 255, 0);
     }
 
     footer {
-        grid-area: footer-area;
-        width: 100%;
-        background-color: #ff0000;
         padding: 14px;
-        color: rgb(255, 255, 255);
+        color: rgb(255, 0, 0);
         text-align: center;
-    }
-
-    #fotografias {
-        display: none;
-    }
-
-    #fotografias a {
-        display: none;
-    }
-
-    #fotografias,
-    #video,
-    #poema {
-        margin-top: 40px;
-        align-items: center;
-    }
-
-    #fotografias h3,
-    #video h3,
-    #poema h3 {
-        color: rgba(255, 238, 4, 0.703);
-        font-size: 24px;
-        border-bottom: 2px solid rgba(38, 36, 36, 0.508);
-        padding-bottom: 10px;
-        margin-bottom: 20px;
-    }
-
-    figure {
-        display: inline-block;
-        width: 50%;
-        margin-right: 10px;
-        text-align: center;
-        background-color: #e9e9e97e;
-        padding: 10px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    figure img {
-        width: 120px;
-        height: 80px;
-        border-radius: 8px;
-    }
-
-    figure figcaption {
-        font-size: 14px;
-        color: #ffffff;
-        margin-top: 8px;
-    }
-
-    #video iframe {
-        display: block;
-        margin: 0 auto;
-        width: 100%;
-        height: auto;
-        max-width: 80%;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    #poema h4 {
-        color: rgb(233, 18, 18);
-        font-size: 20px;
-        margin-bottom: 15px;
-        text-align: center;
-    }
-
-    #poema p {
-        font-style: italic;
-        margin-bottom: 20px;
-        line-height: 1.8;
-        text-align: center;
-    }
-
-    main table {
-        margin: 15px;
-    }
-
-    fieldset {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border: none;
-        padding: 6px;
-    }
-
-    label {
-        font-size: 14px;
-        margin-bottom: 8px;
-        padding: 10px;
-        color: #333;
-        font-family: 'Arial', sans-serif;
-    }
-
-    input,
-    select,
-    textarea {
-        width: 100%;
-        height: 100%;
-        padding: 10px;
-        font-size: 14px;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-        box-sizing: border-box;
-        font-family: 'Arial', sans-serif;
-    }
-
-    fieldset form {
-        display: none;
-    }
-
-    input[type="reset"], input[type="submit"] {
-        margin-top: 15px;
     }
 }
 
@@ -287,7 +92,6 @@ footer {grid-area: footer-area; background-color: rgb(255, 0, 0);}
 /*tablet*/
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     body {
-        background-color: rgb(246, 255, 0);
         display: grid;
         grid-template-columns: 1fr 10fr;
         grid-template-areas:
@@ -298,242 +102,31 @@ footer {grid-area: footer-area; background-color: rgb(255, 0, 0);}
     }
 
     header h1 {
-        grid-area: header-area;
         text-align: center;
         padding: 15px;
-        text-transform: uppercase;
         font-size: 30px;
-        color: rgb(255, 255, 255);
-        font-family: monospace;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     nav {
         display: flex;
-    justify-content: center; 
-    background-color: rgb(246, 255, 0);
-    padding: 10px
-    }
-
-    /* Estilo dos links do menu */
-    nav a {
-        color: white; 
-        background-color: #333; 
-        padding: 10px 20px; 
-        margin: 5px; 
-        text-decoration: none; 
-        border-radius: 10px; 
-    }
-
-    nav a:hover {
-        background-color: #d4d4d4;
-    }
-
-    .menu {
-        position: relative;
-    }
-
-    .conteudo {
-        display: flex;
-        position: absolute;
-        border-radius: 0px 0px 10px 0px;
-        z-index: 1;
-    }
-
-    .conteudo a {
-        color: rgb(255, 255, 255);
-        padding: 12px;
-        text-decoration: none;
-        display: flex;
-    }
-
-    .conteudo a:hover {
-        background-color: #3b3b3bc7;
-        color: rgb(247, 68, 68);
-        padding: 15px;
-        border-radius: 10px;
+        justify-content: center;
+        padding: 10px;
     }
 
     aside {
-        grid-area: aside-area;
         padding: 10px;
-        background-color: rgb(246, 255, 0);
         text-align: center;
-        height: 250px;
-    }
-
-    aside img {
-        display: none;
     }
 
     main {
-        grid-area: main-area;
-        background-color: rgb(246, 255, 0);
-        color: rgb(255, 255, 255);
-        border-radius: 14px;
         padding: 15px;
-        margin: 50px 50px 50px 55px;
-    }
-
-    main a {
-        color: rgb(0, 0, 0);
-        text-decoration: none;
-        font-size: 18px;
-        margin: 5px;
-    }
-
-    main a:hover {
-        background-color: #e9e9e97e;
-        border-radius: 5px;
-        color: rgb(252, 92, 92);
-        padding: 7px;
-    }
-
-    main iframe {
-        width: 55%;
-        height: auto;
-    }
-
-    main p a:first-child {
-        display: none;
-    }
-
-    main div p::first-letter {
-        color: rgba(233, 18, 18, 0.703);
-    }
-
-    main p {
-        margin: 10px;
-    }
-
-    main h2 {
-        color: rgb(0, 0, 0);
-    }
-
-    main h3 {
-        color: rgba(0, 0, 0, 0.703);
+        margin: 20px;
+        border-radius: 14px;
     }
 
     footer {
-        grid-area: footer-area;
-        background-color: #ff0000;
         padding: 19px;
-        width: 100%;
-        height: 100%;
-        color: rgb(255, 255, 255);
         text-align: center;
-    }
-
-    #fotografias, #video, #poema {
-        margin-top: 40px;
-        align-items: center;
-    }
-
-    #fotografias h3,
-    #video h3,
-    #poema h3 {
-        color: rgba(0, 0, 0, 0.703);
-        font-size: 24px;
-        border-bottom: 2px solid rgba(38, 36, 36, 0.508);
-        padding-bottom: 10px;
-        margin-bottom: 20px;
-    }
-
-    figure {
-        display: inline-block;
-        width: 70%;
-        margin-right: 10px;
-        text-align: center;
-        background-color: #e9e9e97e;
-        padding: 10px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    figure img {
-        width: 120px;
-        height: 80px;
-        border-radius: 8px;
-    }
-
-    figure figcaption {
-        font-size: 14px;
-        color: #000000;
-        margin-top: 8px;
-    }
-
-    #video iframe {
-        display: block;
-        margin: 0 auto;
-        width: 100%;
-        height: auto;
-        max-width: 80%;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    #fotografias {
-        display: none;
-    }
-
-    #fotografias a {
-        display: none;
-    }
-
-    #poema h4 {
-        color: rgb(0, 0, 0);
-        font-size: 20px;
-        margin-bottom: 15px;
-        text-align: center;
-    }
-
-    #poema p {
-        font-style: italic;
-        margin-bottom: 20px;
-        line-height: 1.8;
-        text-align: center;
-    }
-
-    main table {
-        margin: 15px;
-    }
-
-    fieldset {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border: none;
-        padding: 6px;
-    }
-
-    label {
-        font-size: 14px;
-        margin-bottom: 8px;
-        padding: 10px;
-        color: #333;
-        font-family: 'Arial', sans-serif;
-    }
-
-    input,
-    select,
-    textarea {
-        width: 100%;
-        padding: 10px;
-        font-size: 14px;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-        box-sizing: border-box;
-        font-family: 'Arial', sans-serif;
-    }
-
-    fieldset form {
-        display: none;
-    }
-
-    input[type="reset"], input[type="submit"] {
-        margin-top: 15px;
     }
 }
 
@@ -541,284 +134,76 @@ footer {grid-area: footer-area; background-color: rgb(255, 0, 0);}
 /*portátil*/
 @media only screen and (min-width: 1024px) and (max-width: 2559px) {
     body {
-        background-color: rgb(246, 255, 0);
-        color: rgb(0, 0, 0);
         display: grid;
-        width: 100vw;
-        height: 100vh;
-        grid-template-rows: 70px 55px 300px fr 50px;
-        grid-template-columns: 1fr;
+        grid-template-rows: 70px 55px 300px 1fr 50px;
         grid-template-areas:
             'header-area'
             'menu-area'
             'aside-area'
-            'main-area '
-            'footer-area ';
+            'main-area'
+            'footer-area';
     }
 
     header {
-        grid-area: header-area;
-        background-color: rgba(255, 0, 0, 0.825);
+        padding: 205px;
         text-align: center;
-        text-transform: uppercase;
-        font-size: 20px;
-        padding: 10px;
-        width: 100%;
-        color: rgb(255, 255, 255);
-        font-family: monospace;
+        font-size: 40px;
+        background-color: rgba(255, 0, 0, 0.825);
     }
 
     nav {
-        grid-area: menu-area;
-        display: flex; 
-    justify-content: center; 
-    background-color: rgb(246, 255, 0);
-    padding: 10px; 
-    }
-
-    /* Estilo dos links do menu */
-    nav a {
-        color: white; 
-        background-color: #333; 
-        padding: 10px 20px; 
-        margin: 5px; 
-        text-decoration: none; 
-        border-radius: 10px; 
-    }
-
-    nav a:hover {
-        background-color: #d4d4d4;
-    }
-
-    .menu {
-        position: relative;
-    }
-
-    .conteudo {
         display: flex;
-       
-        border-radius: 0px 0px 10px 0px;
-        z-index: 1;
-    }
-
-    .conteudo a {
-        color: rgb(255, 255, 255);
-        padding: 12px;
-        text-decoration: none;
-        display: flex;
-        text-align: center;
-    }
-
-    .conteudo a:hover {
-       
-        color: rgb(247, 68, 68);
-        padding: 12px;
-        border-radius: 10px;
-    }
-
-    .conteudo {
-        display: flex;
-    }
-
-    .conteudo:hover {
-        display: flex;
+        justify-content: center;
+        padding: 10px;
     }
 
     aside {
-        grid-area: aside-area;
         padding: 10px;
-        background-color: inherit;
         text-align: center;
-        height: 210px;
-    }
-
-    aside img {
-        border-radius: 5%;
-        margin-top: 20px;
-        margin-left: 10px;
-        width: auto;
-        height: 100%;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     }
 
     main {
-        grid-area: main-area;
-        background-color: rgb(246, 255, 0);
-        color: rgb(0, 0, 0);
-        width: 90%;
-        border-radius: 14px;
         padding: 30px;
-        padding-left: 30px;
         margin: auto;
-        margin-bottom: 40px;
-    }
-
-    main p {
-        font-family: cursive;
-    }
-
-    main a {
-        color: rgb(0, 0, 0);
-        text-decoration: none;
-        font-size: 18px;
-        margin: 5px;
-    }
-
-    main a:hover {
-        background-color: #e9e9e97e;
-        border-radius: 5px;
-        color: rgb(252, 92, 92);
-        padding: 7px;
-    }
-
-    main iframe {
-        width: auto;
-        height: auto;
-    }
-
-    main p {
-        margin: 10px;
-    }
-
-    main h2 {
-        color: rgb(0, 0, 0);
-    }
-
-    main h3 {
-        color: rgba(0, 0, 0, 0.703);
-    }
-
-    main div p {
-        padding-top: 10px;
-        font-size: 15px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    }
-
-    main div p::first-letter {
-        color: rgba(0, 0, 0, 0.703);
-    }
-
-    .format {
-        width: auto;
+        border-radius: 14px;
     }
 
     footer {
-        grid-area: footer-area;
-        width: 100%;
-        height: 100%;
-        background-color: #ff0000;
-        padding: 14px;
-        color: rgb(255, 255, 255);
+        padding: 4px;
         text-align: center;
-    }
-
-    #fotografias, #video, #poema {
-        margin-top: 40px;
-        align-items: center;
-    }
-
-    #fotografias h3,
-    #video h3,
-    #poema h3 {
-        color: rgba(0, 0, 0, 0.703);
-        font-size: 24px;
-        border-bottom: 2px solid rgba(38, 36, 36, 0.508);
-        padding-bottom: 10px;
-        margin-bottom: 20px;
-    }
-
-    figure {
-        display: inline-block;
-        width: 30%;
-        margin: 10px;
-        text-align: center;
-        background-color: #e9e9e97e;
-        padding: 10px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    figure img {
-        width: 120px;
-        height: 80px;
-        border-radius: 8px;
-    }
-
-    figure img:hover {
-        zoom: 150%;
-    }
-
-    figure figcaption {
-        font-size: 14px;
-        color: #555;
-        margin-top: 8px;
-    }
-
-    #video iframe {
-        display: block;
-        margin: 0 auto;
-        width: 100%;
-        height: auto;
-        max-width: 80%;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    #poema h4 {
-        color: rgb(0, 0, 0);
-        font-size: 20px;
-        margin-bottom: 15px;
-        text-align: center;
-    }
-
-    #poema p {
-        font-style: italic;
-        margin-bottom: 20px;
-        line-height: 1.8;
-        text-align: center;
-    }
-
-    main table {
-        margin: 15px;
-    }
-
-    fieldset {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border: none;
-        padding: 6px;
-    }
-
-    label {
-        font-size: 14px;
-        margin-bottom: 8px;
-        padding: 10px;
-        color: #333;
-        font-family: 'Arial', sans-serif;
-    }
-
-    input,
-    select,
-    textarea {
-        width: 100%;
-        padding: 10px;
-        font-size: 14px;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-        box-sizing: border-box;
-        font-family: 'Arial', sans-serif;
-    }
-
-    fieldset form {
-        display: none;
-    }
-
-    input[type="reset"], input[type="submit"] {
-        margin-top: 15px;
+        text-decoration:double, underline, overline;
     }
 }
 
 
 /*4k*/
-@media only screen and (min-width:2560px) {}
+@media only screen and (min-width: 2560px) {
+    body {
+        grid-template-rows: 100px 75px 400px 1fr 100px;
+    }
+
+    header {
+        padding: 20px;
+        font-size: 40px;
+    }
+
+    nav {
+        padding: 20px;
+    }
+
+    aside {
+        padding: 20px;
+        font-size: 18px;
+    }
+
+    main {
+        padding: 50px;
+        margin: 50px;
+        font-size: 22px;
+    }
+
+    footer {
+        padding: 30px;
+        font-size: 20px;
+    }
+}
