@@ -209,3 +209,12 @@ h2 {
     min-height: 100%;
     
 }
+
+#frase {
+    align-content: flex-start;
+    position: relative;
+    color: white; 
+    text-align: center; 
+    z-index: 1; 
+    
+}
