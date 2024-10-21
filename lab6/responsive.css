@@ -213,8 +213,9 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
     #video iframe {
         display: block;
         margin: 0 auto;
-        width: 80%;
-        height: 60%;
+        width: 100%;
+        height: auto;
+        max-width: 80%;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
@@ -480,8 +481,9 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
     #video iframe {
         display: block;
         margin: 0 auto;
-        width: 80%;
-        height: 60%;
+        width: 100%;
+        height: auto;
+        max-width: 80%;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
@@ -714,8 +716,9 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
     #video iframe {
         display: block;
         margin: 0 auto;
-        width: 40%;
+        width: 100%;
         height: auto;
+        max-width: 80%;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
@@ -995,8 +998,9 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
     #video iframe {
         display: block;
         margin: 0 auto;
-        width: 40%;
-        height: 350px;
+        width: 100%;
+        height: auto;
+        max-width: 80%;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
