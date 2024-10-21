@@ -22,7 +22,7 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
 
     header h1 {
         grid-area: header-area;
-        background-color: rgba(160, 35, 35, 0.825);
+        background-color: rgba(255, 0, 0, 0.825);
         text-align: center;
         padding: 15px;
         text-transform: uppercase;
@@ -35,7 +35,7 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
 
     nav {
         grid-area: menu-area;
-        background-color: #302f2f;
+        background-color: #ffffff;
         font-family: Arial, Helvetica, sans-serif;
     }
 
@@ -54,7 +54,7 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
     }
 
     .conteudo a {
-        color: rgb(201, 19, 19);
+        color: rgb(255, 255, 255);
         padding: 12px;
         text-decoration: none;
         display: block;
@@ -63,7 +63,7 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
 
     .conteudo a:hover {
         background-color: #3b3b3bc7;
-        color: rgb(247, 68, 68);
+        color: rgb(255, 0, 0);
         padding: 12px;
         border-radius: 10px;
     }
@@ -93,8 +93,8 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
 
     main {
         grid-area: main-area;
-        background-color: aliceblue;
-        color: black;
+        background-color: rgb(251, 255, 3);
+        color: rgb(255, 255, 255);
         border-radius: 14px;
         padding: 20px;
         margin: 10px;
@@ -105,7 +105,7 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
     }
 
     main a {
-        color: rgb(233, 18, 18);
+        color: rgb(255, 255, 255);
         text-decoration: none;
         font-size: 18px;
         margin: 5px;
@@ -114,7 +114,7 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
     main a:hover {
         background-color: #e9e9e97e;
         border-radius: 5px;
-        color: rgb(252, 92, 92);
+        color: rgb(255, 255, 7);
         padding: 7px;
     }
 
@@ -134,11 +134,11 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
 
 
     main h2 {
-        color: rgb(201, 19, 19);
+        color: rgb(0, 0, 0);
     }
 
     main h3 {
-        color: rgba(233, 18, 18, 0.703);
+        color: rgba(0, 0, 0, 0.703);
     }
 
     main div p {
@@ -148,7 +148,7 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
     }
 
     main div p::first-letter {
-        color: rgba(233, 18, 18, 0.703);
+        color: rgba(0, 0, 0, 0.703);
     }
 
     footer {
@@ -180,7 +180,7 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
     #fotografias h3,
     #video h3,
     #poema h3 {
-        color: rgba(233, 18, 18, 0.703);
+        color: rgba(255, 238, 4, 0.703);
         font-size: 24px;
         border-bottom: 2px solid rgba(38, 36, 36, 0.508);
         padding-bottom: 10px;
@@ -206,7 +206,7 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
 
     figure figcaption {
         font-size: 14px;
-        color: #555;
+        color: #ffffff;
         margin-top: 8px;
     }
 
@@ -279,7 +279,7 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
 /*mobile portrait*/
 @media only screen and (max-width: 767px) and (orientation: portrait) {
     body {
-        background-color: rgb(218, 128, 128);
+        background-color: rgb(235, 234, 234);
         display: grid;
         grid-template-columns: 1fr;
         grid-template-areas:
@@ -292,7 +292,7 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
 
     header h1 {
         grid-area: header-area;
-        background-color: rgba(160, 35, 35, 0.825);
+        background-color: rgba(255, 0, 0, 0.825);
         text-align: center;
         padding: 15px;
         text-transform: uppercase;
@@ -305,7 +305,7 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
 
     nav {
         grid-area: menu-area;
-        background-color: #302f2f;
+        background-color: #ff0000;
         font-family: Arial, Helvetica, sans-serif;
     }
 
@@ -317,13 +317,13 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
     .conteudo {
         display: none;
         position: absolute;
-        background-color: #302f2ff3;
+        background-color: #ff0000f3;
         border-radius: 0px 0px 10px 0px;
         z-index: 1;
     }
 
     .conteudo a {
-        color: rgb(201, 19, 19);
+        color: rgb(255, 254, 254);
         padding: 12px;
         text-decoration: none;
         display: block;
@@ -361,8 +361,8 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
 
     main {
         grid-area: main-area;
-        background-color: aliceblue;
-        color: black;
+        background-color: rgb(255, 238, 0);
+        color: rgb(255, 255, 255);
         border-radius: 14px;
         padding: 20px;
         margin: 10px;
@@ -402,11 +402,11 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
 
 
     main h2 {
-        color: rgb(201, 19, 19);
+        color: rgb(0, 0, 0);
     }
 
     main h3 {
-        color: rgba(233, 18, 18, 0.703);
+        color: rgba(0, 0, 0, 0.703);
     }
 
     main div p {
@@ -416,7 +416,7 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
     }
 
     main div p::first-letter {
-        color: rgba(233, 18, 18, 0.703);
+        color: rgba(0, 0, 0, 0.703);
     }
 
     footer {
@@ -424,9 +424,9 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
         width: 100%;
         height: 100%;
         grid-area: footer-area;
-        background-color: #302f2f;
+        background-color: #fe0000;
         padding: 14px;
-        color: rgb(233, 18, 18);
+        color: rgb(0, 0, 0);
         text-align: center;
     }
 
@@ -448,7 +448,7 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
     #fotografias h3,
     #video h3,
     #poema h3 {
-        color: rgba(233, 18, 18, 0.703);
+        color: rgba(255, 254, 254, 0.703);
         font-size: 24px;
         border-bottom: 2px solid rgba(38, 36, 36, 0.508);
         padding-bottom: 10px;
@@ -460,7 +460,7 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
         width: 50%;
         margin-right: 10px;
         text-align: center;
-        background-color: #e9e9e97e;
+        background-color: #ffff037e;
         padding: 10px;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -489,7 +489,7 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
     }
 
     #poema h3 {
-        color: rgb(233, 18, 18);
+        color: rgb(255, 255, 255);
         font-size: 20px;
         margin-bottom: 15px;
         text-align: center;
@@ -547,7 +547,7 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
 /*tablet*/
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     body {
-        background-color: rgb(218, 128, 128);
+        background-color: rgb(255, 238, 0);
         display: grid;
         grid-template-columns: 1fr 10fr;        
         grid-template-areas:
@@ -559,7 +559,7 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
 
     header h1 {
         grid-area: header-area;
-        background-color: rgba(160, 35, 35, 0.825);
+       
         text-align: center;
         padding: 15px;
         text-transform: uppercase;
@@ -573,7 +573,7 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
 
     nav {
         grid-area: menu-area;
-        background-color: #302f2f;
+        background-color: #ffffff;
         font-family: Arial, Helvetica, sans-serif;
         width: 100%;
         height: auto;
@@ -589,7 +589,7 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
     }
 
     .conteudo a {
-        color: rgb(201, 19, 19);
+        color: rgb(255, 255, 255);
         padding: 12px;
         text-decoration: none;
         display: block;
@@ -618,8 +618,8 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
 
     main {
         grid-area: main-area;
-        background-color: aliceblue;
-        color: black;
+        background-color: rgb(251, 255, 0);
+        color: rgb(255, 255, 255);
         border-radius: 14px;
         padding: 15px;
         margin: 50px 50px 50px 55px; 
@@ -627,7 +627,7 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
 
 
     main a {
-        color: rgb(233, 18, 18);
+        color: rgb(0, 0, 0);
         text-decoration: none;
         font-size: 18px;
         margin: 5px;
@@ -658,20 +658,20 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
     }
 
     main h2 {
-        color: rgb(201, 19, 19);
+        color: rgb(0, 0, 0);
     }
 
     main h3 {
-        color: rgba(233, 18, 18, 0.703);
+        color: rgba(0, 0, 0, 0.703);
     }
 
     footer {
         grid-area: footer-area;
-        background-color: #302f2f;
+        background-color: #ff0000;
         padding: 19px;
         width: 100%;
         height: 100%;
-        color: rgb(233, 18, 18);
+        color: rgb(0, 0, 0);
         text-align: center;
     }
 
@@ -683,7 +683,7 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
     #fotografias h3,
     #video h3,
     #poema h3 {
-        color: rgba(233, 18, 18, 0.703);
+        color: rgba(0, 0, 0, 0.703);
         font-size: 24px;
         border-bottom: 2px solid rgba(38, 36, 36, 0.508);
         padding-bottom: 10px;
@@ -709,7 +709,7 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
 
     figure figcaption {
         font-size: 14px;
-        color: #555;
+        color: #000000;
         margin-top: 8px;
     }
 
@@ -732,7 +732,7 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
     }
 
     #poema h4 {
-        color: rgb(233, 18, 18);
+        color: rgb(0, 0, 0);
         font-size: 20px;
         margin-bottom: 15px;
         text-align: center;
@@ -789,8 +789,8 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
 /*portátil*/
 @media only screen and (min-width: 1024px) and (max-width: 2559px){
     body {
-        background-color: rgb(218, 128, 128);
-        color: rgb(218, 210, 210);
+        background-color: rgb(238, 255, 0);
+        color: rgb(0, 0, 0);
         display: grid;
         width: 100vw;
         height: 100vh;
@@ -807,7 +807,7 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
 
     header{
         grid-area: header-area;
-        background-color: rgba(160, 35, 35, 0.825);
+        background-color: rgba(255, 0, 0, 0.825);
         text-align: center;
         text-transform: uppercase;
         font-size: 20px;
@@ -819,7 +819,7 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
 
     nav {
         grid-area: menu-area;
-        background-color: #302f2f;
+        background-color: #ffffff;
         font-family: Arial, Helvetica, sans-serif;
         width: 100%;
     }
@@ -838,7 +838,7 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
     }
 
     .conteudo a {
-        color: rgb(201, 19, 19);
+        color: rgb(255, 255, 255);
         padding: 12px;
         text-decoration: none;
         display: block;
@@ -879,8 +879,8 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
 
     main {
         grid-area: main-area;
-        background-color: aliceblue;
-        color: black;
+        background-color: rgb(246, 255, 0);
+        color: rgb(0, 0, 0);
         width: 90%;
         border-radius: 14px;
         padding: 30px;
@@ -896,7 +896,7 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
     }
 
     main a {
-        color: rgb(233, 18, 18);
+        color: rgb(0, 0, 0);
         text-decoration: none;
         font-size: 18px;
         margin: 5px;
@@ -921,11 +921,11 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
 
 
     main h2 {
-        color: rgb(201, 19, 19);
+        color: rgb(0, 0, 0);
     }
 
     main h3 {
-        color: rgba(233, 18, 18, 0.703);
+        color: rgba(0, 0, 0, 0.703);
     }
 
     main div p {
@@ -935,7 +935,7 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
     }
 
     main div p::first-letter {
-        color: rgba(233, 18, 18, 0.703);
+        color: rgba(0, 0, 0, 0.703);
     }
 
     .format{
@@ -947,9 +947,9 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
         width: 100%;
         height: 100%;
         grid-area: footer-area;
-        background-color: #302f2f;
+        background-color: #ff0000;
         padding: 14px;
-        color: rgb(233, 18, 18);
+        color: rgb(255, 255, 255);
         text-align: center;
     }
 
@@ -961,7 +961,7 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
     #fotografias h3,
     #video h3,
     #poema h3 {
-        color: rgba(233, 18, 18, 0.703);
+        color: rgba(0, 0, 0, 0.703);
         font-size: 24px;
         border-bottom: 2px solid rgba(38, 36, 36, 0.508);
         padding-bottom: 10px;
@@ -1006,7 +1006,7 @@ footer {grid-area: footer-area; background-color: rgb(232, 38, 38);}
     }
 
     #poema h4 {
-        color: rgb(233, 18, 18);
+        color: rgb(0, 0, 0);
         font-size: 20px;
         margin-bottom: 15px;
         text-align: center;
