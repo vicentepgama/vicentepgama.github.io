@@ -159,3 +159,13 @@ nav a:hover {
 #cidades section:hover div {
     background-color: #e6e6e6;
 }
+
+
+.parallax {
+    background-image: src("lab6\images\pico-de-montanha-majestoso-em-paisagem-tranquila-de-inverno-gerada-por-ia_188544-15662.avif") ;
+    min-height: 200px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
