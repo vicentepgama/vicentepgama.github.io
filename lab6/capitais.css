@@ -13,10 +13,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
     background-color: #ff0000;
     color: #ffffff;
     padding: 15px 30px;
-    z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -27,6 +27,8 @@ header a:hover {
 
 nav {
     margin-bottom: 20px;
+    align-items: center;
+    text-align: center;
 }
 
 nav a {
@@ -42,6 +44,8 @@ nav a {
 
 nav a:hover {
     background-color: #555;
+    align-items: center;
+    text-align: center;
 }
 
 
