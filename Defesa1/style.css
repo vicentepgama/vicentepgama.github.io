@@ -118,13 +118,19 @@ footer {
         margin: 0 px;
     }
 
-    .labs:nth-child(odd){
-        background-color: #ffffff;
-        padding: 30px 20px 40px;
-        border-radius: 5px;
-        margin: 0 5px;
+    .labs {
+       
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        background-color: #6b6868;
         gap: 10px;
-        ;
+    }
+    .labs:nth-child(odd) {
+        background-color: #b6b6b6;
+    }
+
+    .labs:nth-child(even) {
+        background-color: #b6b6b6;
     }
 }
 
