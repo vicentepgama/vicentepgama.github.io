@@ -125,12 +125,12 @@ footer {
         background-color: #6b6868;
         gap: 10px;
     }
-    .labs:nth-child(odd) {
+    .filho1:nth-child(odd) {
         background-color: #b6b6b6;
     }
 
-    .labs:nth-child(even) {
-        background-color: #b6b6b6;
+    .filho1:nth-child(even) {
+        background-color: #6d6d6d;
     }
 }
 
