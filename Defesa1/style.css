@@ -1,0 +1,207 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+    
+}
+
+header {
+    grid-area: header-area;
+    background-color: #6b6868;
+}
+
+.interfaces {
+    grid-area: interfaces-area;
+}
+
+.introducao {
+    grid-area: introducao-area;
+}
+
+.laboratorios {
+    grid-area: laboratorios-area;
+}
+
+.imagem{
+    grid-area: imagem-area;
+}
+
+footer {
+    grid-area: footer-area;
+    background-color: #6b6868;
+    
+}
+
+
+
+.imagem {
+    grid-area: imagem-area;
+}
+@media only screen and (max-width: 767px) {
+
+    body {
+        background-color: rgb(0, 0, 0);
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            'header-area'
+            'interfaces-area'
+            'introducao-area'
+            'laboratorios-area'
+            'imagem-area'
+            'footer-area';
+        gap: 10px;
+    }
+
+    header{
+        color: black;
+        text-decoration: none;
+        padding: 10px 20px;
+        background-color: #6b6868;
+        margin: 0 5px;
+        
+    }
+
+    .interfaces {
+        background-color: #ffffff;
+        padding: 30px 20px 40px;
+        border-radius: 5px;
+        margin: 0 5px;
+        gap: 10px;
+        ;
+    } 
+
+    .introducao {
+        background-color: #ffffff;
+        padding: 30px 20px 40px;
+        border-radius: 5px;
+        margin: 0 5px;
+        gap: 10px;
+    } 
+
+    .ajustar {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+
+    .interfaces, .introducao, .laboratorios, .imagem {
+        margin-bottom: 10px; 
+    }
+
+   
+    .laboratorios {
+        background-color: #ffffff;
+        padding: 30px 20px 40px;
+        border-radius: 5px;
+        margin: 0 5px;
+        gap: 10px;
+    }
+
+    .imagem {
+        background-color: #ffffff;
+        padding: 30px 20px 40px;
+        border-radius: 5px;
+        margin: 0 5px;
+        
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        color: black;
+        text-decoration: none;  
+        padding: 10px 50px;
+        background-color: #6b6868;
+        margin: 0 px;
+    }
+
+    .labs:nth-child(odd){
+        background-color: #ffffff;
+        padding: 30px 20px 40px;
+        border-radius: 5px;
+        margin: 0 5px;
+        gap: 10px;
+        ;
+    }
+}
+
+
+@media only screen and (min-width: 767px) {
+
+    body {
+        background-color: rgb(0, 0, 0);
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            'header-area'
+            'interfaces-area imagem-area'
+            'introducao-area laboratorios-area'
+            'footer-area footer-area';
+    }
+
+    header{
+        color: black;
+        text-decoration: none;
+        padding: 10px 20px;
+        background-color: #6b6868;
+        margin: 0 5px;
+        
+        
+    }
+
+    .interfaces {
+        background-color: #ffffff;
+        padding: 30px 20px 40px;
+        border-radius: 5px;
+        margin: 0 5px;
+        gap: 10px;
+        ;
+    } 
+
+    .introducao {
+        background-color: #ffffff;
+        padding: 30px 20px 40px;
+        border-radius: 5px;
+        margin: 0 5px;
+        gap: 10px;
+    } 
+
+    .ajustar {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+
+    .interfaces, .introducao, .laboratorios, .imagem {
+        margin-bottom: 20px; 
+    }
+
+   
+    .laboratorios {
+        background-color: #ffffff;
+        padding: 30px 20px 40px;
+        border-radius: 5px;
+        margin: 0 5px;
+        gap: 10px;
+    }
+
+    .imagem {
+        background-color: #ffffff;
+        padding: 30px 20px 40px;
+        border-radius: 5px;
+        margin: 0 5px;
+        
+    }
+
+    footer {
+        color: black;
+        text-decoration: none;
+        padding: 10px 20px;
+        background-color: #6b6868;
+        margin: 0 5px;
+    }
+}
