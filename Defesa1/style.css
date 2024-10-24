@@ -142,7 +142,7 @@ footer {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-areas:
-            'header-area'
+            'header-area header-area'
             'interfaces-area imagem-area'
             'introducao-area laboratorios-area'
             'footer-area footer-area';
