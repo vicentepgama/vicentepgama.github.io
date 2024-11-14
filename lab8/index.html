@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interatividade</title>
+</head>
+<body id="body">
+    <ol>
+        <!--passa por aqui -->
+        <h1>
+            <li id="passarPorCima">Passa por aqui!</li>
+        </h1>
+
+        <!-- pinta-me com botoes de cor -->
+        <h1>
+            <li id="frase">Pinta-me</li>
+            <button data-color="red" id="corGlobal">Red</button>
+            <button data-color="green" id="corGlobal">Green</button>
+            <button data-color="blue" id="corGlobal">Blue</button>
+        </h1>
+
+        <!-- experimenta escrever -->
+        <h1>
+            <li>Experimenta escrever... 
+                <input type="text" id="inputBox">
+            </li>
+        </h1>
+
+        <!-- escolha uma cor -->
+        <h1>
+            <li>Escolha uma cor: 
+                <select id="colorSelect" onchange="alterarCor(this)">
+                    <option value="white">White</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                </select>
+            </li>
+        </h1>
+
+        <!-- botao de contagem -->
+        <h1>
+            <li>
+                <button id="conta"type="conta" name="conta">Conta!</button> 
+                <span id="count">0</span>
+            </li>
+        </h1>
+
+        <!-- inserir nome e idade -->
+        <h1>
+            <li>
+                <input type="text" id="nameInput" placeholder="Insira o seu nome">
+                <input type="number" id="ageInput" placeholder="Insira a sua idade">
+                <button id="submitBtn">Submit</button>
+            </li>
+        </h1>
+            <p id="outputMessage"></p>
+        
+
+        <!-- contador automatico -->
+        <h1>
+            <li>Automatic Counter: <span id="autoCounter">0</span></li>
+        </h1>
+    </ol>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
