@@ -6,7 +6,7 @@ async function fetchProdutos() {
       throw new Error(`Erro ao buscar produtos: ${response.status} ${response.statusText}`);
     }
     const produtos = await response.json();
-    console.log('Produtos recebidos:', produtos); // Log para depuração
+    console.log('Produtos recebidos:', produtos); // Log para debug
     return produtos;
   } catch (error) {
     console.error('Erro ao buscar produtos:', error);
@@ -23,7 +23,7 @@ async function fetchCategorias() {
       throw new Error(`Erro ao buscar categorias: ${response.status} ${response.statusText}`);
     }
     const categorias = await response.json();
-    console.log('Categorias recebidas:', categorias); // Log para depuração
+    console.log('Categorias recebidas:', categorias); // Log para debug
     return categorias;
   } catch (error) {
     console.error('Erro ao buscar categorias:', error);
@@ -37,7 +37,7 @@ async function preencherCategorias() {
   const select = document.getElementById('categoria-select');
   const categorias = await fetchCategorias();
 
-  // Adiciona a opção padrão "Todos"
+  // Adiciona a opcao padrao "Todos"
   const optionTodos = document.createElement('option');
   optionTodos.value = 'todos';
   optionTodos.textContent = 'Todas as Categorias';
@@ -51,10 +51,10 @@ async function preencherCategorias() {
   });
 }
 
-// Renderiza a lista de produtos com base em filtros, pesquisa e ordenação
+// Renderiza a lista de produtos com base em filtros, pesquisa e ordenacao
 async function exibirProdutos() {
   const container = document.querySelector(".produtos-container");
-  container.innerHTML = ''; // Limpa o conteúdo existente
+  container.innerHTML = ''; // Limpa o conteudo existente
 
   const produtos = await fetchProdutos();
 
@@ -81,7 +81,7 @@ async function exibirProdutos() {
     );
   }
 
-  // Aplicar ordenação de preço
+  // Aplicar ordenacao de preco
   const ordemSelecionada = document.getElementById('ordem-preco-select').value;
   if (ordemSelecionada === 'asc') {
     produtosFiltrados.sort((a, b) => a.price - b.price);
@@ -107,7 +107,7 @@ function criarElementoProduto(produto) {
   card.classList.add("produto-card");
 
   const imagem = document.createElement("img");
-  imagem.src = produto.image || 'https://via.placeholder.com/150';
+  imagem.src = produto.image || 'https://via.placeholder.com/150'; // Imagem de placeholder
   imagem.alt = produto.title || 'Produto';
   imagem.classList.add("produto-imagem");
 
@@ -135,7 +135,7 @@ function criarElementoProduto(produto) {
   return card;
 }
 
-// Carrega o carrinho da memória local
+// Carrega o carrinho da memoria local
 function carregarCarrinho() {
   atualizarCarrinho();
 }
@@ -143,7 +143,7 @@ function carregarCarrinho() {
 // Atualiza o carrinho na interface
 function atualizarCarrinho() {
   const container = document.querySelector(".carrinho-container");
-  container.innerHTML = ""; // Limpa o conteúdo existente
+  container.innerHTML = ""; // Limpa o conteudo existente
 
   const carrinho = recuperarCarrinho();
 
@@ -264,12 +264,12 @@ document.getElementById("comprar-button").addEventListener("click", () => {
   document.getElementById("compra-resultado").textContent += ` Total final: ${totalFinal.toFixed(2)}€`;
 });
 
-// Inicializa a página
+// Inicializa a pagina
 document.addEventListener("DOMContentLoaded", async () => {
   await preencherCategorias();
   await exibirProdutos();
 
-  // Adicionar eventos para filtros, ordenação e pesquisa
+  // Adicionar eventos para filtros, ordenacao e pesquisa
   document.getElementById('categoria-select').addEventListener('change', exibirProdutos);
   document.getElementById('ordem-preco-select').addEventListener('change', exibirProdutos);
   document.getElementById('pesquisa-input').addEventListener('input', exibirProdutos);
