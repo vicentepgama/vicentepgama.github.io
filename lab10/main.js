@@ -1,103 +1,109 @@
 // Buscar produtos da API
-async function fetchProdutos() {
-  try {
-    const response = await fetch('https://deisishop.pythonanywhere.com/products/');
-    if (!response.ok) {
-      throw new Error(`Erro ao buscar produtos: ${response.status} ${response.statusText}`);
-    }
-    const produtos = await response.json();
-    console.log('Produtos recebidos:', produtos); // Log para debug
-    return produtos;
-  } catch (error) {
-    console.error('Erro ao buscar produtos:', error);
-    alert('Erro ao carregar os produtos. Por favor, tente novamente mais tarde.');
-    return [];
-  }
+function fetchProdutos() {
+  return fetch('https://deisishop.pythonanywhere.com/products/')
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`Erro ao buscar produtos: ${response.status} ${response.statusText}`);
+      }
+      return response.json();
+    })
+    .then((produtos) => {
+      console.log('Produtos recebidos:', produtos); // Log para debug
+      return produtos;
+    })
+    .catch((error) => {
+      console.error('Erro ao buscar produtos:', error);
+      alert('Erro ao carregar os produtos. Por favor, tente novamente mais tarde.');
+      return [];
+    });
 }
 
 // Buscar categorias da API
-async function fetchCategorias() {
-  try {
-    const response = await fetch('https://deisishop.pythonanywhere.com/categories/');
-    if (!response.ok) {
-      throw new Error(`Erro ao buscar categorias: ${response.status} ${response.statusText}`);
-    }
-    const categorias = await response.json();
-    console.log('Categorias recebidas:', categorias); // Log para debug
-    return categorias;
-  } catch (error) {
-    console.error('Erro ao buscar categorias:', error);
-    alert('Erro ao carregar categorias. Por favor, tente novamente mais tarde.');
-    return [];
-  }
+function fetchCategorias() {
+  return fetch('https://deisishop.pythonanywhere.com/categories/')
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`Erro ao buscar categorias: ${response.status} ${response.statusText}`);
+      }
+      return response.json();
+    })
+    .then((categorias) => {
+      console.log('Categorias recebidas:', categorias); // Log para debug
+      return categorias;
+    })
+    .catch((error) => {
+      console.error('Erro ao buscar categorias:', error);
+      alert('Erro ao carregar categorias. Por favor, tente novamente mais tarde.');
+      return [];
+    });
 }
 
 // Atualizar o elemento select com categorias
-async function preencherCategorias() {
+function preencherCategorias() {
   const select = document.getElementById('categoria-select');
-  const categorias = await fetchCategorias();
+  fetchCategorias().then((categorias) => {
+    // Adiciona a opção padrão "Todos"
+    const optionTodos = document.createElement('option');
+    optionTodos.value = 'todos';
+    optionTodos.textContent = 'Todas as Categorias';
+    select.appendChild(optionTodos);
 
-  // Adiciona a opcao padrao "Todos"
-  const optionTodos = document.createElement('option');
-  optionTodos.value = 'todos';
-  optionTodos.textContent = 'Todas as Categorias';
-  select.appendChild(optionTodos);
-
-  categorias.forEach((categoria) => {
-    const option = document.createElement('option');
-    option.value = categoria.toLowerCase();
-    option.textContent = categoria.charAt(0).toUpperCase() + categoria.slice(1);
-    select.appendChild(option);
+    categorias.forEach((categoria) => {
+      const option = document.createElement('option');
+      option.value = categoria.toLowerCase();
+      option.textContent = categoria.charAt(0).toUpperCase() + categoria.slice(1);
+      select.appendChild(option);
+    });
   });
 }
 
-// Renderiza a lista de produtos com base em filtros, pesquisa e ordenacao
-async function exibirProdutos() {
+// Renderiza a lista de produtos com base em filtros, pesquisa e ordenação
+function exibirProdutos() {
   const container = document.querySelector(".produtos-container");
-  container.innerHTML = ''; // Limpa o conteudo existente
+  container.innerHTML = ''; // Limpa o conteúdo existente
 
-  const produtos = await fetchProdutos();
+  fetchProdutos().then((produtos) => {
+    if (produtos.length === 0) {
+      container.innerHTML = '<p>Nenhum produto disponível no momento.</p>';
+      return;
+    }
 
-  if (produtos.length === 0) {
-    container.innerHTML = '<p>Nenhum produto disponível no momento.</p>';
-    return;
-  }
+    // Aplicar filtro de categoria
+    const categoriaSelecionada = document.getElementById('categoria-select').value;
+    let produtosFiltrados = produtos;
 
-  // Aplicar filtro de categoria
-  const categoriaSelecionada = document.getElementById('categoria-select').value;
-  let produtosFiltrados = produtos;
+    if (categoriaSelecionada !== 'todos') {
+      produtosFiltrados = produtos.filter((produto) =>
+        produto.category.toLowerCase() === categoriaSelecionada
+      );
+    }
 
-  if (categoriaSelecionada !== 'todos') {
-    produtosFiltrados = produtos.filter((produto) =>
-      produto.category.toLowerCase() === categoriaSelecionada
-    );
-  }
+    // Aplicar filtro de pesquisa
+    const termoPesquisa = document.getElementById('pesquisa-input').value.toLowerCase();
+    if (termoPesquisa) {
+      produtosFiltrados = produtosFiltrados.filter((produto) =>
+        produto.title.toLowerCase().includes(termoPesquisa)
+      );
+    }
 
-  // Aplicar filtro de pesquisa
-  const termoPesquisa = document.getElementById('pesquisa-input').value.toLowerCase();
-  if (termoPesquisa) {
-    produtosFiltrados = produtosFiltrados.filter((produto) =>
-      produto.title.toLowerCase().includes(termoPesquisa)
-    );
-  }
+    // Aplicar ordenação de preço
+    const ordemSelecionada = document.getElementById('ordem-preco-select').value;
+    if (ordemSelecionada === 'asc') {
+      produtosFiltrados.sort((a, b) => a.price - b.price);
+    } else if (ordemSelecionada === 'desc') {
+      produtosFiltrados.sort((a, b) => b.price - a.price);
+    }
 
-  // Aplicar ordenacao de preco
-  const ordemSelecionada = document.getElementById('ordem-preco-select').value;
-  if (ordemSelecionada === 'asc') {
-    produtosFiltrados.sort((a, b) => a.price - b.price);
-  } else if (ordemSelecionada === 'desc') {
-    produtosFiltrados.sort((a, b) => b.price - a.price);
-  }
+    // Renderizar os produtos filtrados e ordenados
+    if (produtosFiltrados.length === 0) {
+      container.innerHTML = '<p>Nenhum produto encontrado com os filtros aplicados.</p>';
+      return;
+    }
 
-  // Renderizar os produtos filtrados e ordenados
-  if (produtosFiltrados.length === 0) {
-    container.innerHTML = '<p>Nenhum produto encontrado com os filtros aplicados.</p>';
-    return;
-  }
-
-  produtosFiltrados.forEach((item) => {
-    const produtoElemento = criarElementoProduto(item);
-    container.appendChild(produtoElemento);
+    produtosFiltrados.forEach((item) => {
+      const produtoElemento = criarElementoProduto(item);
+      container.appendChild(produtoElemento);
+    });
   });
 }
 
@@ -135,7 +141,7 @@ function criarElementoProduto(produto) {
   return card;
 }
 
-// Carrega o carrinho da memoria local
+// Carrega o carrinho da memória local
 function carregarCarrinho() {
   atualizarCarrinho();
 }
@@ -143,7 +149,7 @@ function carregarCarrinho() {
 // Atualiza o carrinho na interface
 function atualizarCarrinho() {
   const container = document.querySelector(".carrinho-container");
-  container.innerHTML = ""; // Limpa o conteudo existente
+  container.innerHTML = ""; // Limpa o conteúdo existente
 
   const carrinho = recuperarCarrinho();
 
@@ -264,12 +270,13 @@ document.getElementById("comprar-button").addEventListener("click", () => {
   document.getElementById("compra-resultado").textContent += ` Total final: ${totalFinal.toFixed(2)}€`;
 });
 
-// Inicializa a pagina
-document.addEventListener("DOMContentLoaded", async () => {
-  await preencherCategorias();
-  await exibirProdutos();
+// Inicializa a página
+document.addEventListener("DOMContentLoaded", () => {
+  preencherCategorias();
+  exibirProdutos();
+  carregarCarrinho();
 
-  // Adicionar eventos para filtros, ordenacao e pesquisa
+  // Adicionar eventos para filtros, ordenação e pesquisa
   document.getElementById('categoria-select').addEventListener('change', exibirProdutos);
   document.getElementById('ordem-preco-select').addEventListener('change', exibirProdutos);
   document.getElementById('pesquisa-input').addEventListener('input', exibirProdutos);
