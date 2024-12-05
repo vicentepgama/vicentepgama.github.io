@@ -13,7 +13,7 @@ function fetchProdutos() {
     })  
     .catch((error) => {
       console.error('Erro ao buscar produtos:', error);
-      alert('Erro ao carregar os produtos. Por favor, tente novamente mais tarde.');
+    
       return [];
     });
 }
