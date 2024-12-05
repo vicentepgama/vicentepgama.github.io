@@ -82,16 +82,17 @@ function exibirProdutos() {
     const termoPesquisa = document.getElementById('pesquisa-input').value.toLowerCase();
     if (termoPesquisa) {
       produtosFiltrados = produtosFiltrados.filter((produto) =>
-        produto.title.toLowerCase().includes(termoPesquisa)
+        produto.title.toLowerCase().includes(termoPesquisa) ||
+      produto.description.toLowerCase().includes(termoPesquisa)
       );
     }
 
     // Aplicar ordenação de preço
-    const ordemSelecionada = document.getElementById('ordem-preco-select').value;
+    const ordemSelecionada = document.getElementById('ordem-rating-select').value;
     if (ordemSelecionada === 'asc') {
-      produtosFiltrados.sort((a, b) => a.price - b.price);
+      produtosFiltrados.sort((a, b) => a.rating.rate - b.rating.rate);
     } else if (ordemSelecionada === 'desc') {
-      produtosFiltrados.sort((a, b) => b.price - a.price);
+      produtosFiltrados.sort((a, b) => b.rating.rate - a.rating.rate);
     }
 
     // Renderizar os produtos filtrados e ordenados
@@ -278,6 +279,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Adicionar eventos para filtros, ordenação e pesquisa
   document.getElementById('categoria-select').addEventListener('change', exibirProdutos);
-  document.getElementById('ordem-preco-select').addEventListener('change', exibirProdutos);
+  document.getElementById('ordem-rating-select').addEventListener('change', exibirProdutos);
   document.getElementById('pesquisa-input').addEventListener('input', exibirProdutos);
+
+  document.getElementById('adicionarTudo').addEventListener('click', () => {
+    
+    fetchProdutos().then((produtos) => {
+      produtos.forEach((produto) => {
+        adicionarAoCarrinho(produto);
+      });
+    });
+  }
+)
+
+document.getElementsById('menosInformacaoNaDescricao').addEventListener('click', () => {
+  fetchProdutos().then((produtos) => {
+    produtos.forEach((produto) => {
+      produto.description = produto.description="";
+    });
+  });
+
+})
+
+document.getElementById('submeter-morada').addEventListener('click', () => {
+  const morada = document.getElementById('morada').value;
+
+  
+  
+
 });
+
+});
+
+

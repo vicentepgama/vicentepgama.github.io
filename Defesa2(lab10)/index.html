@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja Interativa</title>
+  <link rel="stylesheet" href="styless.css">
+</head>
+<body>
+  <header class="navbar">
+    <h1 class="navbar-title">Loja GAMA</h1>
+    <nav>
+      <ul class="navbar-menu">
+        <li><a href="#produtos" class="navbar-link">Produtos</a></li>
+        <li><a href="#carrinho" class="navbar-link">Carrinho</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Produtos -->
+    <section id="produtos" class="produtos-section">
+      <h2 class="section-title">Produtos</h2>
+      <h1> <button id="adicionarTudo">AdicionarTudo</button></h1>
+      <h1> <button id="menosInformacaoNaDescricao">MenosInfo</button></h1>
+
+      <!-- Filtros e Ordenação -->
+      <div class="filtros">
+        <input
+          type="text"
+          id="pesquisa-input"
+          class="pesquisa-input"
+          placeholder="Pesquisar produtos..."
+        />
+        <select id="categoria-select" class="categoria-select">
+          <option value="todos">Todas as Categorias</option>
+        </select>
+        <select id="ordem-rating-select" class="ordem-rating-select">
+          <option value="nenhum">Ordenar por Rating</option>
+          <option value="asc">Preço: Menor para Maior</option>
+          <option value="desc">Preço: Maior para Menor</option>
+        </select>
+    
+      </div>
+      
+      <div class="produtos-container">
+        <!-- Produtos serão inseridos dinamicamente aqui -->
+      </div>
+    </section>
+
+    <!-- Carrinho -->
+    <section id="carrinho" class="carrinho-section">
+      <h2 class="section-title">Carrinho</h2>
+      <div class="carrinho-container">
+        <!-- Itens do carrinho serão inseridos dinamicamente aqui -->
+      </div>
+      <p class="carrinho-total">Total: <span id="carrinho-total-valor">0.00</span>€</p>
+    </section>
+
+    <!-- Compra -->
+    <div class="compra-container">
+      <label>
+        <input type="checkbox" id="estudante-checkbox" />
+        És estudante do DEISI?
+      </label>
+      
+      <label>
+      <input type="text" id="morada-input" placeholder="Introduza a morada"/>
+      <button id="submeter-morada">Submeter</button>
+    </label>
+      <div>
+        <label for="cupao-input">Cupão de desconto:</label>
+        <p>(Carregue em comprar para aparecer o desconto aplicado)</p>
+        <input type="text" id="cupao-input" placeholder="Digite o cupão" />
+      </div>
+      <button id="comprar-button">Comprar</button>
+      <p id="compra-resultado"></p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>2024</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
