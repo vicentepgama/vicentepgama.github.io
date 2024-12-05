@@ -314,10 +314,6 @@ document.getElementById('enviarMoradaComoPost').addEventListener('click', () => 
     .then((response) => {
       return response.json();
     })
-    .then((data) => {
-      console.log('Resposta do servidor:', data);
-      
-    })
     .catch((error) => {
       console.error('Erro ao enviar morada:', error);
     
