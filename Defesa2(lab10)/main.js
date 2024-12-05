@@ -301,10 +301,29 @@ document.getElementsById('menosInformacaoNaDescricao').addEventListener('click',
 
 })
 
-document.getElementById('submeter-morada').addEventListener('click', () => {
-  const morada = document.getElementById('morada').value;
+document.getElementById('enviarMoradaComoPost').addEventListener('click', () => {
+  fetch('https://deisishop.pythonanywhere.com/post/', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      morada: 'Rua do Post, 1234-567 Lisboa',
+    }),
+  })
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      console.log('Resposta do servidor:', data);
+      
+    })
+    .catch((error) => {
+      console.error('Erro ao enviar morada:', error);
+    
+    });
 
-  
+
   
 
 });
